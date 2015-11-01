@@ -1,2 +1,2 @@
 export { default as mapStore } from './map-store';
-export { default as provider } from './provider';
+export { default as Provider } from './provider';

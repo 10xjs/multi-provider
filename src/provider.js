@@ -25,10 +25,14 @@ export default wrapComponent(Provider => {
   }
   MultiProvider.propTypes = {
     store: storeShape,
-    stores: PropTypes.objectOf(storeShape.isRequired),
+    stores: PropTypes.objectOf(storeShape),
     children: PropTypes.element.isRequired,
+  };
+  MultiProvider.defaultProps = {
+    stores: {}
   };
   MultiProvider.childContextTypes = {
     stores: PropTypes.objectOf(storeShape.isRequired),
   };
+  return MultiProvider;
 })(Provider);
